@@ -11,7 +11,7 @@
             
                     <div class="col">
 
-                        <div class="card" id="movieCard">
+                        <div class="card h-100" id="movieCard">
 
                             <img src="<%= movie.posterURL %>" class="img-fluid image-movie-poster card-img-top " id="moviePoster" alt="<%= movie.title %> poster">
 
@@ -30,13 +30,15 @@
 
                                 <small class="text-body-secondary">
                                     <p>
-                                    <a href="https://www.imdb.  com/title/<%= movie.imdbId    %>/" 
-                                    target="_blank"
-                                    id="imdbLink"
-                                    rel="noopener noreferrer"
-                                    class="btn btn-primary">
-                                    View on IMDb
-                                    </a>
+                                        <a href="https://www.imdb.com/title/<%= movie.imdbId %>/" 
+                                            target="_blank"
+                                            id="imdbLink"
+                                            rel="noopener noreferrer"
+                                            class="btn btn-primary">
+
+                                            View on IMDb
+                                            
+                                        </a>
                                     </p>
                                 </small>
 

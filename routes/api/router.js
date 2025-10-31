@@ -19,10 +19,13 @@ router.get('/', async (req, res) => {
     try{
         const genres = [
             'animation', 
+            'classic',
             'comedy',
             'drama',
+            'horror',
             'family',
-            'horror'
+            'mystery',
+            'western'
         ]
 
         const requests = genres.map(g => axios.get(`${BASE_URL}/${g}`))
