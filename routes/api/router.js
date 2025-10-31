@@ -2,6 +2,7 @@ const express = require('express')
 const axios = require('axios')
 const router = express.Router()
 const paginate = require('../../helpers/pagination')
+const movieData = require('../../helpers/movieData')
 
 const BASE_URL = 'https://api.sampleapis.com/movies'
 
@@ -62,19 +63,33 @@ router.get('/', async (req, res) => {
 
 // dynamic genre route
 router.get('/genre/:type', async (req, res) => {
+
     const { type } = req.params 
     const page = parseInt(req.query.page) || 1
 
     try {
+
         const { data } = await axios.get(`${BASE_URL}/${type}`)
 
         const paginated = paginate(data, page, 10)
+
+        // movie data
+        const extras = movieData[type] || {
+
+            description: 'No description available for this genre.',
+            yrReleased: 'N/A',
+            rating: 'N/A',
+            avgRuntime: 'N/A',
+            imdbRating: 'N/A'
+
+        }
 
         res.render('genre', { 
             title: `${type.charAt(0).toLocaleUpperCase() + type.slice(1)} Movies`, 
             movies: paginated.data,
             pagination: paginated,
-            type
+            type,
+            extras
         })
 
     } catch (error) {

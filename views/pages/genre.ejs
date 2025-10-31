@@ -4,6 +4,16 @@
 
     <h1 class="display-1 main-heading text-center text-capitalize"><%= title %></h1>
 
+    <section class="text-center mb-4">
+
+        <p>Description: <%= extras.description %></p>
+        <p>Year Released: <%= extras.yrReleased %></p>
+        <p>Typical Rating: <%= extras.rating %></p>
+        <p>Avg Runtime: <%= extras.avgRuntime %></p>
+        <p>IMDb Rating: <%= extras.imdbRating %></p>
+
+    </section>
+
     <div class="container movie-grid">
 
         <div class="row row-cols-1 row-cols-md-5 g-4" id="movieRow">
