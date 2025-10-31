@@ -1,0 +1,52 @@
+* { box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffb4a2;
+}
+
+.main-heading {
+    color: #6d6875;
+}
+
+.movie-title {
+    color: #00120b;
+    font-family: monospace;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Movie card hover effect */
+#movieCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#movieCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image zoom on hover */
+#moviePoster {
+  transition: transform 0.5s ease;
+}
+
+#movieCard:hover #moviePoster {
+  transform: scale(1.1);
+}
+
+/* IMDb button animation */
+#imdbLink {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#imdbLink:hover {
+  background-color: #e2b616; /* IMDb yellow */
+  color: #000;
+  transform: translateY(-3px);
+}
