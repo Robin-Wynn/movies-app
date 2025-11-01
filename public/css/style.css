@@ -1,26 +1,46 @@
 * { box-sizing: border-box;}
 
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #ffb4a2;
+  margin: 0;
+  padding: 0;
+  background-color: #ffb4a2;
+}
+
+.main {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .main-heading {
-    color: #6d6875;
+  color: #6d6875;
 }
 
 .movie-title {
-    color: #00120b;
-    font-family: monospace;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: 800;
-    text-align: center;
+  color: #00120b;
+  font-family: monospace;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 800;
+  text-align: center;
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-body h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-body p {
+  font-size: 0.85rem;
 }
 
 /* Movie card hover effect */
 #movieCard {
+  max-width: 180px;
+  min-height: 260px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 12px;
   overflow: hidden;
