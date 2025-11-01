@@ -22,41 +22,46 @@
                 
                 <div class="col">
 
-                    <div class="card h-100" id="movieCard">
+                    <a href="/<%= type %>/<%= movie.id %>" class="text-decoration-none text-dark">
 
-                        <img src="<%= movie.posterURL %>" 
-                            class="img-fluid image-movie-poster card-img-top" id="moviePoster" alt="<%= movie.title %> poster">
-
-                        <div class="card-body">
+                        <div class="card h-100" id="movieCard">
+    
+                            <img src="<%= movie.posterURL %>" 
+                                class="img-fluid image-movie-poster card-img-top" id="moviePoster" alt="<%= movie.title %> poster">
+    
+                            <div class="card-body text-center">
+                                    
+                                <h2 class="card-title" id="movieTitle"><%= movie.title %></h2>
+                                    
+                            </div>
                                 
-                            <h2 class="card-title" id="movieTitle"><%= movie.title %></h2>
-                                
+                            <div class="card-footer">
+    
+                                    <small class="text-body-secondary">
+    
+                                        <p>
+    
+                                            <a href="https://www.imdb.com/title/<%= movie.imdbId %>/"
+                                                id="imdbLink" 
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                class="btn btn-primary">
+                                                View on IMDb
+                                            </a>
+    
+                                        </p>
+    
+                                    </small>
+    
+                            </div>
+    
+    
+                    
+                    
                         </div>
-                            
-                        <div class="card-footer">
 
-                                <small class="text-body-secondary">
+                    </a>
 
-                                    <p>
-
-                                        <a href="https://www.imdb.com/title/<%= movie.imdbId %>/"
-                                            id="imdbLink" 
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="btn btn-primary">
-                                            View on IMDb
-                                        </a>
-
-                                    </p>
-
-                                </small>
-
-                        </div>
-
-
-                
-                
-                    </div>
 
                 </div>
              

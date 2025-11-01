@@ -6,6 +6,10 @@ body {
   background-color: #ffb4a2;
 }
 
+p { 
+  text-transform: capitalize;
+}
+
 .main {
   padding-top: 1rem;
   padding-bottom: 1rem;

@@ -1,0 +1,37 @@
+<%- include('../partials/header') %>
+
+    <main class="main container text-center" id="main">
+
+        <h1 class="display-4 mb-4"><%= movie.title %></h1>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <img src="<%= movie.posterURL %>" class=".img-fluid.rounded.shadow.mb-3 " style="max-width:300px" alt="<%= movie.title %> poster">  
+
+            </div>
+
+            <div class="col-md-6 text-start">
+
+                <p>Genre: <%= genre %> </p>
+                <p>Year Released: <%= extras.yrReleased %></p>
+                <p>Typical Rating: <%= extras.rating %></p>
+                <p>Avg Runtime: <%= extras.avgRuntime %></p>
+                <p>IMDb Rating: <%= extras.imdbRating %></p>
+                <p class="mt-3">Description: <%= extras.description %></p>
+
+                <a href="https://www.imdb.com/title/<%= movie.imdbId %>/" 
+                    id="imdbLink"
+                    target="_blank" 
+                    class="btn btn-outline-primary">View on IMDb
+                </a>
+
+            </div>
+
+        </div>
+
+        <a href="/<%= genre %>" class="btn btn-outline-secondary mt-4">⬅ Back to <%= genre %> movies</a>
+
+    </main>
+
+<%- include('../partials/footer') %>
