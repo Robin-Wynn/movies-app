@@ -1,6 +1,6 @@
 const express = require('express')
 const axios = require('axios')
-const router = require('./routes/api/router')
+const router = require('./routes/router')
 const path = require('path')
 
 const server = express()

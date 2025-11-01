@@ -1,8 +1,8 @@
 const express = require('express')
 const axios = require('axios')
 const router = express.Router()
-const paginate = require('../../helpers/pagination')
-const movieData = require('../../helpers/movieData')
+const paginate = require('../helpers/pagination')
+const movieData = require('../helpers/movieData')
 
 const BASE_URL = 'https://api.sampleapis.com/movies'
 
@@ -60,6 +60,14 @@ router.get('/', async (req, res) => {
 
     }
 })
+
+// const endpoints = [
+//     'comedy', 'animation', 'drama'
+// ]
+
+// endpoints.forEach(endpoint => {
+//     router.use(`/${endpoint}`, require(`./api/${endpoint}Routes`))
+// })
 
 // dynamic genre route
 router.get('/genre/:type', async (req, res) => {
